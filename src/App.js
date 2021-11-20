@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import {EnableButton} from "./Components/EnableButton";
+import {AccountRender} from "./Components/AccountRender";
+import {AccountBal} from "./Components/AccountBal";
 
 function App() {
     return (
@@ -10,9 +13,10 @@ function App() {
                 <p>
                     The goal is to connect to your eth wallet and tell you how much ohm you make per day.
                 </p>
+                <EnableButton/>
+                <AccountRender/>
+                <AccountBal/>
             </header>
-            <body>
-            </body>
         </div>
     );
 }

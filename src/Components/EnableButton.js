@@ -4,7 +4,7 @@ export class EnableButton extends Component {
     render() {
         return (
             <div>
-                <button className="enableEthereumButton" onClick={connectMask}>Enable Ethereum</button>
+                <button className="enableEthereumButton" onClick={connectMask}>Connect Metamask</button>
             </div>
         );
     }
