@@ -3,6 +3,7 @@ import './App.css';
 import {EnableButton} from "./Components/EnableButton";
 import {AccountRender} from "./Components/AccountRender";
 import {AccountBal} from "./Components/AccountBal";
+import {OhmBal} from "./Components/OhmBal";
 
 function App() {
     return (
@@ -15,7 +16,7 @@ function App() {
                 </p>
                 <EnableButton/>
                 <AccountRender/>
-                <AccountBal/>
+                <OhmBal/>
             </header>
         </div>
     );
