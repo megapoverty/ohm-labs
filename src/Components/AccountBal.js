@@ -28,7 +28,8 @@ async function getBalance() {
         if (err) {
             console.log(err)
         } else {
-            document.getElementById("output").innerHTML = web3.utils.fromWei(result, 'ether');
+            document.getElementById("output").innerHTML =
+                web3.utils.fromWei(result, 'ether') + " Eth";
             console.log(web3.utils.fromWei(result, 'ether') + " ETH");
         }
     })
