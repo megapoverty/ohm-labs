@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##Deployment
+## Deployment
 You can find a live version of this branch at:
 https://upbeat-boyd-1fb309.netlify.app/
 
