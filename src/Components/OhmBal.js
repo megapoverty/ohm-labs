@@ -44,28 +44,18 @@ let minABI = [
 
 let contract = new web3.eth.Contract(minABI, tokenAddress);
 
-async function getOhmBalance() {
-    let walletAddress;
-    walletAddress = document.getElementById("address").value;
-
-
-    await web3.eth.getBalance(walletAddress, function(err, result){
-        if (err){
-            console.log(err);
-        }else{
-            console.log(web3.utils.fromWei(result, 'ether') + " ETH");
-        }
-    });
-
-
-    await contract.methods.balanceOf(walletAddress).call(
+export async function getOhmBalance(walletAddress) {
+    return contract.methods.balanceOf(walletAddress).call(
         {from: ''}, function (error, result) {
             if (error) {
                 console.log(error);
+                Promise.reject(error);
             } else {
                 let convertedResult = web3.utils.fromWei(result, 'Gwei');
-                document.getElementById("output2").innerHTML =
-                    convertedResult + ' Ohm';
+                console.log(convertedResult);
+                Promise.resolve(convertedResult);
+                // document.getElementById("output2").innerHTML =
+                   //  convertedResult + ' Ohm';
             }
         }
     );

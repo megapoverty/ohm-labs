@@ -29,19 +29,7 @@ export class OhmPrice extends Component {
     }
 
 
-    async getTokenPrice(tokenId = "olympus") {
-        let resp;
-        try {
-            resp = await axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=${tokenId}&vs_currencies=usd`);
-            console.log('Program here_1');
-            console.log(resp.data[tokenId].usd);
-
-            this.setState({price: resp.data[tokenId].usd});
-            return resp.data[tokenId].usd;
-        } catch (e) {
-            console.log("coingecko api error: ", e);
-        }
-    }
+    
 }
 
 
