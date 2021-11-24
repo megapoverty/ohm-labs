@@ -2,8 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import {EnableButton} from "./Components/EnableButton";
 import {AccountRender} from "./Components/AccountRender";
-import {AccountBal} from "./Components/AccountBal";
 import {OhmBal} from "./Components/OhmBal";
+import {OhmPrice} from "./Components/OhmPrice";
+import {currentAPY} from "./Components/currentAPY";
 
 function App() {
     return (
@@ -17,6 +18,8 @@ function App() {
                 <EnableButton/>
                 <AccountRender/>
                 <OhmBal/>
+                <OhmPrice/>
+                <currentAPY/>
             </header>
         </div>
     );
