@@ -34,7 +34,6 @@ export const BalanceForm = (props) => {
             const stakingReward = epoch.distribute;
             const circ = await sohmMainContract.circulatingSupply();
             const stakingRebase = Number(stakingReward.toString()) / Number(circ.toString());
-            const fiveDayRate = Math.pow(1 + stakingRebase, 5 * 3) - 1;
             const stakingAPY = Math.pow(1 + stakingRebase, 365 * 3) - 1;
             const trimmedStakingAPY = (stakingAPY * 100);
             console.log('Staking APY: ' + trimmedStakingAPY);
@@ -68,16 +67,6 @@ export const BalanceForm = (props) => {
                 reject(err.toString());
             });
         });
-        return axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=${tokenId}&vs_currencies=usd`)
-            .then(response => {
-                const data = response.data;
-                const price = data[tokenId].usd;
-                console.log(price);
-                Promise.resolve(price);
-            })
-            .catch(err => {
-                Promise.reject(err.toString());
-            });
     }
 
     return (

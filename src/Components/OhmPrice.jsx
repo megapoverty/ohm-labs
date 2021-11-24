@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import axios from "axios";
 
 
-let ohmPrice = 11;
 
 export class OhmPrice extends Component {
     constructor(props) {
